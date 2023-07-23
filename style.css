@@ -1,4 +1,4 @@
-*{     /* se aplica pentru toate elemente HTML */
+*{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -92,7 +92,7 @@ body{
 
 .col img{
     width: 40px;
-    margin-right: 10px;    /* creeaza spatiul dintre imagine si scris */
+    margin-right: 10px;
 }
 
 .humidity, .wind{
