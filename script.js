@@ -30,7 +30,7 @@ else
 
 async function init(position)
 {
-    const response = await fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + `&appid=${apiKey}`)   // `` =/= '' =/= ""
+    const response = await fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + `&appid=${apiKey}`);
     var data = await response.json();
     const response1 = await fetch("https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + `&appid=${daysApiKey}`);
     var data1 = await response1.json();
@@ -87,14 +87,6 @@ function meanTemperature(nrDay, data)
 
 function dailyIcon(day, data1)
 {
-    //cu ajutorul unui vector de pozitie
-    // 0 for clear
-    // 1 for clouds
-    // 2 for drizzle
-    // 3 for mist
-    // 4 for rain
-    // 5 for snow
-
     let arr = new Array(0,0,0,0,0);
 
     for(index2 = 8*day; index2 < 8*(day+1) - 1; index2 ++ )
